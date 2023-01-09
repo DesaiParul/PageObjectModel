@@ -21,7 +21,7 @@ public class HomePage extends TestBase {
 	WebElement userNameLabel;
 	
 	@FindBy(xpath = "//span[contains(text(),'Calendar')]")
-	WebElement CalenderPageLink;
+	WebElement CalendarPageLink;
 	
 	@FindBy(xpath = "//span[contains(text(),'Contacts')]")
 	WebElement ContactsPageLink;
@@ -29,8 +29,16 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Deals')]")
 	WebElement DeaksPageLink;
 	
+	@FindBy(xpath = "//span[contains(text(),'Documents')]")
+	WebElement DocumentsPageLink;
+	
 	@FindBy(xpath = "//div[@id='main-nav']//div[3]//button/i")
 	WebElement NewContactLink;
+	
+	@FindBy(xpath = "//div[@id='main-nav']/div[2]/button[1]/i[1]")
+	WebElement NewCalendarLink;
+	
+	
 	
 	
 	
@@ -53,13 +61,17 @@ public class HomePage extends TestBase {
 		ContactsPageLink.click();
 		return new ContactsPage();
 	}
-	public CalenderPage clickOnCalenderLink() {
-		CalenderPageLink.click();
-		return new CalenderPage();
+	public CalendarPage clickOnCalendarLink() {
+		CalendarPageLink.click();
+		return new CalendarPage();
 	}
 	public DealsPage clickOnDealsLink() {
 		DeaksPageLink.click();
 		return new DealsPage();
+	}
+	public DocumentsPage clickOnDocumentsLink() {
+		DocumentsPageLink.click();
+		return new DocumentsPage();
 	}
 	public void clickOnNewContactLink() {
 		Actions action = new Actions(driver);
@@ -68,4 +80,10 @@ public class HomePage extends TestBase {
 		
 	}
 
+	public void clickOnNewCalendarLink() {
+		Actions action = new Actions(driver);
+		action.moveToElement(CalendarPageLink).build().perform();
+		NewCalendarLink.click();
+		
+	}
 }

@@ -32,7 +32,7 @@ public class ConatctsPageTest extends TestBase{
 	    testUtil = new TestUtil();
 	    contactsPage = new ContactsPage();
 	   // testUtil.switchToFrame();
-		loginpage.CloseLink();
+		//loginpage.CloseLink();
 		//driver.switchTo().defaultContent();
 	    homePage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	   contactsPage = homePage.clickOnContactsLink();		

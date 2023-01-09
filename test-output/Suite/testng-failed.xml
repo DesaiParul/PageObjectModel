@@ -8,8 +8,10 @@
     <classes>
       <class name="com.crm.qa.tests.HomePageTest">
         <methods>
+          <include name="verifyDocumentsLinkTest"/>
           <include name="verifyUsernameTest"/>
           <include name="tearDown"/>
+          <include name="verifyCalendarLinkTest"/>
           <include name="verifyContactsLinkTest"/>
           <include name="setUp"/>
           <include name="verifyHomePageTitleTest"/>
@@ -18,10 +20,21 @@
       <class name="com.crm.qa.tests.LoginPageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="LoginPageTitleTest"/>
+          <include name="crmLogoImageTest"/>
           <include name="setUp"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.crm.qa.tests.LoginPageTest -->
+      <class name="com.crm.qa.tests.ConatctsPageTest">
+        <methods>
+          <include name="verifyUsernameTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyEmailLinkTest"/>
+          <include name="validateCreateNewContact"/>
+        </methods>
+      </class> <!-- com.crm.qa.tests.ConatctsPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

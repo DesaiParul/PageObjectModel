@@ -22,7 +22,7 @@ public class TestUtil extends TestBase {
 	public static String TESTDATA_SHEET_PATH = "C:\\Selenium_WorkSpace\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCrmTestData.xlsx";
 
 	static Workbook book;
-	static org.apache.poi.ss.usermodel.Sheet sheet;
+	static Sheet sheet;
 	
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -48,13 +48,13 @@ public class TestUtil extends TestBase {
 		}
 		return data;
 	}
-	
-	
+		
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		//String currentDir = System.getProperty("user.dir");
+		String currentDir = System.getProperty("user.dir");
 		//FileUtils.copyFile(scrFile, new File(".screenshots" + "System.currentTimeMillis()" + ".png"));
-		FileUtils.copyFile(scrFile, new File(".//screenshots/screen.png"));
+		//FileUtils.copyFile(scrFile, new File(".//screenshots/screen.png"));
+		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 	}
 	
 	
@@ -68,5 +68,5 @@ public class TestUtil extends TestBase {
 		
 		
 	}
-
+	
 }

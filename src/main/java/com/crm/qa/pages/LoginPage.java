@@ -15,7 +15,7 @@ public class LoginPage extends TestBase {
 	
 	//PageFactory: OR(Object Repository)
 	
-	@FindBy(xpath = "//a[contains(text(),'Login')]")
+	@FindBy(xpath = "//span[contains(text(),'Log In')]")
 	WebElement loginlink;
 	
 	@FindBy(name="email")
@@ -30,7 +30,7 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//a[contains(text(),'Sign Up')]")
 	WebElement signUpbtn;
 	
-	@FindBy(xpath = "//a[@class='navbar-brand']")
+	@FindBy(xpath = "//div[@class='rd-navbar-panel']")
 	WebElement crmlogo;
 	
 	@FindBy(xpath = "//div[@aria-label='Dismiss']")
